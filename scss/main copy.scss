@@ -1,0 +1,125 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+
+// Styles
+body {
+    font-family: "Open Sans", serif;
+    &::before {
+        content: "";
+        background-image: url(../img/bg.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 60vmax;
+        opacity: 0.9;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        @media screen and (max-width: 992px) {
+            opacity: 0.4;
+        }
+    }
+}
+
+// navigation / navbar
+.custom-nav {
+    .navbar-brand {
+        img {
+            width: 20px;
+            height: 20px;
+            margin-top: -7px;
+        }
+        span {
+            color: $color-5;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            // display: flex;
+            align-items: center;
+
+            .nav-item {
+                .nav-link {
+                    color: $color-5;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-left: 2em;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: darken($color: $color-5, $amount: 30%);
+                    }
+                }
+            .sign-up-button {
+                background-color: $color-5;
+                color: $color-6;
+                border-radius: 2em;
+                border: 0;
+                padding: 0.4em 1.4em;
+                // padding-left: 1.4em;
+                // padding-right: 1.4em;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: -1em;
+    }
+}
+
+// custom section
+.custom-section {
+    margin-top: 10em;
+    h2 {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $color-5;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 2rem;
+        color: $color-4;
+        line-height: 1;
+    }
+
+    p {
+        color: $color-3;
+        font-size: 1.2rem;
+        margin-top: 2em;
+    }
+
+    a {
+        margin-top: 2em;
+        @include tombol;
+        border: 1px solid transparent;
+        transition: 0.5s ease;
+
+        &:hover {
+            color: $color-4;
+            border: 1px solid $color-5;
+            background-color: transparent;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        margin-top: 3em;
+        text-align: center;
+        h2, h3, p {
+            text-shadow: 1px 1px 2px rgba($color-3,  0.3);
+        }
+        h3 {
+            color: lighten($color: $color-4, $amount: 10%);
+        }
+    }
+}

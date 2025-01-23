@@ -1,0 +1,13 @@
+// Mixin
+@mixin tombol {
+    display: inline-block;
+    color: $color-6;
+    background-color: $color-4;
+    border-radius: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+@mixin gradient($direction, $color1, $color2) {
+    background: linear-gradient($direction, $color1, $color2);
+}

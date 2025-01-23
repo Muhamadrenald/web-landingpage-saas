@@ -1,0 +1,330 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+// Styles
+body {
+    font-family: "Open Sans", serif;
+    &::before {
+        content: "";
+        background-image: url(../img/bg.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 60vmax;
+        opacity: 0.9;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        @media screen and (max-width: 992px) {
+            opacity: 0.4;
+        }
+    }
+}
+
+// navigation / navbar
+.custom-nav {
+    .navbar-brand {
+        img {
+            width: 20px;
+            height: 20px;
+            margin-top: -7px;
+        }
+        span {
+            color: $color-5;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            align-items: center;
+
+            .nav-item {
+                .nav-link {
+                    color: $color-5;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-left: 2em;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: darken($color: $color-5, $amount: 30%);
+                    }
+                }
+            .sign-up-button {
+                background-color: $color-5;
+                color: $color-6;
+                border-radius: 2em;
+                border: 0;
+                padding: 0.4em 1.4em;
+            }
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: -1em;
+    }
+}
+
+// custom section
+.custom-section {
+    // margin-top: 10em;
+    margin-top: 7em;
+    h2 {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $color-5;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 2rem;
+        color: $color-4;
+        line-height: 1;
+    }
+
+    p {
+        color: $color-3;
+        font-size: 1.2rem;
+        margin-top: 2em;
+    }
+
+    a {
+        margin-top: 2em;
+        @include tombol;
+        border: 1px solid transparent;
+        transition: 0.5s ease;
+
+        &:hover {
+            color: $color-4;
+            border: 1px solid $color-5;
+            background-color: transparent;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        margin-top: 3em;
+        text-align: center;
+        h2, h3, p {
+            text-shadow: 1px 1px 2px rgba($color-3,  0.3);
+        }
+        h3 {
+            color: lighten($color: $color-4, $amount: 10%);
+        }
+    }
+}
+
+// Pricing Section
+#pricing {
+    h2 {
+        font-weight: 700;
+        font-size: 3rem;
+        color: $color-5;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        margin-bottom: 1.5em;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: $color-5;
+            }
+
+            p {
+                font-size: 1.2rem;
+                color: $color-3;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    font-size: 1rem;
+                    color: $color-4;
+                }
+            }
+
+            .btn {
+                @include tombol;
+            }
+        }
+    }
+}
+
+// Projects Section
+#projects {
+    h2 {
+        font-weight: 700;
+        font-size: 3rem;
+        color: $color-5;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-bottom: 1.5em;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: filter 0.3s;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
+
+        .card-body {
+            h5 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $color-5;
+            }
+
+            p {
+                font-size: 1rem;
+                color: $color-3;
+            }
+
+            .btn {
+                @include tombol;
+                transition: background-color 0.3s, color 0.3s;
+
+                &:hover {
+                    background-color: $color-4;
+                    color: $color-6;
+                }
+            }
+        }
+    }
+}
+
+// About Section
+#about {
+    h2 {
+        font-weight: 700;
+        font-size: 3rem;
+        color: $color-5;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: $color-3;
+        line-height: 1.8;
+    }
+}
+
+// Contact Section
+#contact {
+    h2 {
+      font-weight: 700;
+      font-size: 3rem;
+      color: $color-5;
+    }
+  
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      
+      .form-label {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $color-4;
+      }
+  
+      .form-control {
+        border-radius: 0.5rem;
+        border: 1px solid lighten($color-3, 20%);
+        padding: 0.8rem;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          border-color: $color-5;
+          box-shadow: 0 0 5px lighten($color-5, 30%);
+        }
+      }
+  
+      .btn {
+        @include tombol;
+        font-size: 1rem;
+        padding: 0.6rem 1.6rem;
+        transition: background-color 0.3s, box-shadow 0.3s;
+  
+        &:hover {
+        //   background-color: $color-4;
+        //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        color: $color-4;
+        border: 1px solid $color-5;
+        background-color: transparent;
+        }
+      }
+    }
+  }
+  
+  // Footer Section
+.footer {
+    // @include gradient(to right, #08211A, #187A67);
+    // background-color: darken($color-4, 10%);
+    background: $gradient;
+    color: $color-6;
+    font-size: 1rem;
+  
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+  
+      p {
+        font-size: 0.9rem;
+        color: lighten($color-6, 10%);
+      }
+  
+      .footer-links {
+        margin-top: 1em;
+  
+        .footer-link {
+          color: lighten($color-6, 20%);
+          font-weight: 600;
+          text-decoration: none;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: $color-2;
+          }
+        }
+      }
+    }
+  }
+
+  /* CSS untuk animasi */
+.section-animate {
+    opacity: 0;
+    transform: translateY(50px); /* Elemen akan mulai sedikit lebih rendah */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .section-animate.visible {
+    opacity: 1;
+    transform: translateY(0); /* Elemen bergerak ke posisi semula */
+  }
+  

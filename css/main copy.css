@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Hatran&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap");
+body {
+  font-family: "Open Sans", serif;
+}
+body::before {
+  content: "";
+  background-image: url(../img/bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 60vmax;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 992px) {
+  body::before {
+    opacity: 0.4;
+  }
+}
+
+.custom-nav .navbar-brand img {
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+}
+.custom-nav .navbar-brand span {
+  color: #6E55E5;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+.custom-nav #navbarNav .navbar-nav {
+  align-items: center;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link {
+  color: #6E55E5;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 2em;
+  transition: all 0.3s;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
+  color: #2a158c;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-up-button {
+  background-color: #6E55E5;
+  color: #FFFFFF;
+  border-radius: 2em;
+  border: 0;
+  padding: 0.4em 1.4em;
+}
+@media screen and (max-width: 992px) {
+  .custom-nav {
+    margin-top: -1em;
+  }
+}
+
+.custom-section {
+  margin-top: 10em;
+}
+.custom-section h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: #6E55E5;
+  white-space: nowrap;
+  line-height: 1;
+}
+.custom-section h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #1CAF7E;
+  line-height: 1;
+}
+.custom-section p {
+  color: #827E8C;
+  font-size: 1.2rem;
+  margin-top: 2em;
+}
+.custom-section a {
+  margin-top: 2em;
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #1CAF7E;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+}
+.custom-section a:hover {
+  color: #1CAF7E;
+  border: 1px solid #6E55E5;
+  background-color: transparent;
+}
+@media screen and (max-width: 992px) {
+  .custom-section {
+    margin-top: 3em;
+    text-align: center;
+  }
+  .custom-section h2, .custom-section h3, .custom-section p {
+    text-shadow: 1px 1px 2px rgba(130, 126, 140, 0.3);
+  }
+  .custom-section h3 {
+    color: #23db9e;
+  }
+}/*# sourceMappingURL=main copy.css.map */

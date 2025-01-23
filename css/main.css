@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Hatran&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap");
+body {
+  font-family: "Open Sans", serif;
+}
+body::before {
+  content: "";
+  background-image: url(../img/bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 60vmax;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 992px) {
+  body::before {
+    opacity: 0.4;
+  }
+}
+
+.custom-nav .navbar-brand img {
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+}
+.custom-nav .navbar-brand span {
+  color: #6E55E5;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+.custom-nav #navbarNav .navbar-nav {
+  align-items: center;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link {
+  color: #6E55E5;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 2em;
+  transition: all 0.3s;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
+  color: #2a158c;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-up-button {
+  background-color: #6E55E5;
+  color: #FFFFFF;
+  border-radius: 2em;
+  border: 0;
+  padding: 0.4em 1.4em;
+}
+@media screen and (max-width: 992px) {
+  .custom-nav {
+    margin-top: -1em;
+  }
+}
+
+.custom-section {
+  margin-top: 7em;
+}
+.custom-section h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: #6E55E5;
+  white-space: nowrap;
+  line-height: 1;
+}
+.custom-section h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #1CAF7E;
+  line-height: 1;
+}
+.custom-section p {
+  color: #827E8C;
+  font-size: 1.2rem;
+  margin-top: 2em;
+}
+.custom-section a {
+  margin-top: 2em;
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #1CAF7E;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+}
+.custom-section a:hover {
+  color: #1CAF7E;
+  border: 1px solid #6E55E5;
+  background-color: transparent;
+}
+@media screen and (max-width: 992px) {
+  .custom-section {
+    margin-top: 3em;
+    text-align: center;
+  }
+  .custom-section h2, .custom-section h3, .custom-section p {
+    text-shadow: 1px 1px 2px rgba(130, 126, 140, 0.3);
+  }
+  .custom-section h3 {
+    color: #23db9e;
+  }
+}
+
+#pricing h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #6E55E5;
+}
+#pricing .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin-bottom: 1.5em;
+}
+#pricing .card:hover {
+  transform: scale(1.05);
+}
+#pricing .card .card-body h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #6E55E5;
+}
+#pricing .card .card-body p {
+  font-size: 1.2rem;
+  color: #827E8C;
+}
+#pricing .card .card-body ul {
+  list-style: none;
+  padding: 0;
+}
+#pricing .card .card-body ul li {
+  font-size: 1rem;
+  color: #1CAF7E;
+}
+#pricing .card .card-body .btn {
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #1CAF7E;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+}
+
+#projects h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #6E55E5;
+}
+#projects .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 1.5em;
+}
+#projects .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+#projects .card .card-img-top {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: filter 0.3s;
+}
+#projects .card .card-img-top:hover {
+  filter: brightness(0.8);
+}
+#projects .card .card-body h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #6E55E5;
+}
+#projects .card .card-body p {
+  font-size: 1rem;
+  color: #827E8C;
+}
+#projects .card .card-body .btn {
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #1CAF7E;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+#projects .card .card-body .btn:hover {
+  background-color: #1CAF7E;
+  color: #FFFFFF;
+}
+
+#about h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #6E55E5;
+}
+#about p {
+  font-size: 1.2rem;
+  color: #827E8C;
+  line-height: 1.8;
+}
+
+#contact h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #6E55E5;
+}
+#contact .contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#contact .contact-form .form-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1CAF7E;
+}
+#contact .contact-form .form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #b6b4bc;
+  padding: 0.8rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+#contact .contact-form .form-control:focus {
+  border-color: #6E55E5;
+  box-shadow: 0 0 5px #dfdaf9;
+}
+#contact .contact-form .btn {
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #1CAF7E;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.6rem 1.6rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+#contact .contact-form .btn:hover {
+  color: #1CAF7E;
+  border: 1px solid #6E55E5;
+  background-color: transparent;
+}
+
+.footer {
+  background: linear-gradient(to right, #174C3F, #299983);
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+.footer .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.footer .container p {
+  font-size: 0.9rem;
+  color: white;
+}
+.footer .container .footer-links {
+  margin-top: 1em;
+}
+.footer .container .footer-links .footer-link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer .container .footer-links .footer-link:hover {
+  color: #DB9CB4;
+}
+
+/* CSS untuk animasi */
+.section-animate {
+  opacity: 0;
+  transform: translateY(50px); /* Elemen akan mulai sedikit lebih rendah */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0); /* Elemen bergerak ke posisi semula */
+}/*# sourceMappingURL=main.css.map */
